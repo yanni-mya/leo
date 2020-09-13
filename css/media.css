@@ -1,5 +1,23 @@
 @media (max-width:1200px) {
+    .header {
+        overflow: hidden;
+    }
+
+    .header__menu label {
+        visibility: visible;
+    }
+    .header__menu__list {
+        position: absolute;
+        flex-direction: column;
+        transform: translateX(150%);
+        top: 8%;
+        transition: .3s;
+        text-align: right;
+    }
     
+    #menu__burger_check:checked ~ .header__menu__list {
+        transform: translateX(-50%);
+    }
 }
 @media (max-width:970px) {
     

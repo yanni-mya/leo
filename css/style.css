@@ -82,13 +82,16 @@ body {
 .header {
     background: url(../img/bg.png) top no-repeat;
     background-size: 100% auto;
+    overflow: hidden;
+
 }
  
 .header_top {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 6rem;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .header__logo {
@@ -106,6 +109,51 @@ body {
 }
 
 .header__menu {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu label {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    visibility: hidden;
+    position: relative;
+    
+}
+
+.menu__burger {
+    width: 100%;
+    background: #fff;
+    height: 2px;
+}
+
+.menu__burger::before {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    height: 2px;
+    content: "";
+    position: absolute;
+    top: 0;
+}
+
+.menu__burger::after {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+}
+
+#menu__burger_check {
+    visibility: hidden;
+}
+
+.header__menu__list {
     color: #b8bbbd;
     font-size: 1.5rem;
     display: flex;
@@ -115,7 +163,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.header__menu li {
+.header__menu__list li {
     padding: 0 2rem;
 }
 
