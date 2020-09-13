@@ -52,21 +52,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin-right: -50%;
     transform: translate(-50%, -50%);*/
 
-/* @media (max-width:1200px) {
-    .container {
-        max-width: 920px;
-    }
-}
-@media (max-width:970px) {
-    .container {
-        max-width: 700px;
-    }
-}
-@media(max-width:767px) {
-    .container {
-        max-width: 650px;
-    }
-} */	
+
 
 /*--------------------*/
 
@@ -84,7 +70,7 @@ body {
 
 .container {
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1940px;
 }
 
 .subtitle {
@@ -142,6 +128,8 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 1rem 0;
 }
 
 .header__slider-box {
@@ -188,6 +176,9 @@ a:hover {
 
 .body {
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .body__subtitle {
@@ -197,7 +188,7 @@ a:hover {
 .body__slider-box {
     display: flex;
     flex-direction: column;
-    
+    width: 95%;
 }
 
 .body__slider__control {
@@ -214,7 +205,7 @@ a:hover {
 
 .body__slider__slides {
     position: relative;
-    min-height: 55rem;
+    min-height: 50rem;
     border-bottom: 1px solid #71757c;
     border-left: 1px solid #71757c;
     border-right: 1px solid #71757c;
@@ -246,6 +237,10 @@ a:hover {
     max-width: 80%;
 }
 
+.body__slider__text p {
+    margin-bottom: 1rem;
+}
+
 
 input[type=radio]:checked + .body__slider__item {
 	visibility: visible;
@@ -254,11 +249,14 @@ input[type=radio]:checked + .body__slider__item {
 
 .body__info {
     display: flex;
-
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem 0;
+    margin: 0 1rem;
 }
 
 .body__info_left {
-    width: 50%;
+    max-width: 48%;
     text-align: center;
     /* вертикальное выравнивание ебать */
 }
@@ -268,7 +266,7 @@ input[type=radio]:checked + .body__slider__item {
 }
 
 .body__info_right {
-    width: 50%;
+    max-width: 47%;
 }
 
 .body__info__list li {
@@ -293,6 +291,7 @@ input[type=radio]:checked + .body__slider__item {
 
 .footer__form__login, .footer__form__subscribe {
     width: 48%;
+    max-width: 600px;
     border-radius: 10px;
     padding: 0 1.5rem 1rem;
 }
