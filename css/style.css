@@ -83,7 +83,7 @@ body {
     background: url(../img/bg.png) top no-repeat;
     background-size: 100% auto;
     overflow: hidden;
-
+    position: relative;
 }
  
 .header_top {
@@ -94,18 +94,15 @@ body {
     padding: 0 2rem;
 }
 
-.header__logo {
-    display: block;
-}
-
-.header__logo:hover {
-    text-decoration: none;
-}
-
 .logo {
+    display: block;
     font-family: 'Roboto Mono', monospace;
     font-size: 5rem;
     color: #b8bbbd;
+}
+
+.logo:hover {
+    text-decoration: none;
 }
 
 .header__menu {
@@ -214,6 +211,7 @@ a:hover {
     text-align: center;
     background: #194e3485;
     border-radius: 3px;
+    margin: 0 auto;
 }
 
 .header__slider_btn a:visited {
@@ -260,21 +258,21 @@ a:hover {
 
 .body__slider__item {
     width: 100%;
-	position: absolute;
-    visibility: hidden;
+	display: none;
 
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    min-height: 50rem;
 }
 
 .body__slider__photo {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.body__slider__photo img {
+    width: 100%;
 }
 
 .body__slider__text {
@@ -290,7 +288,7 @@ a:hover {
 
 
 input[type=radio]:checked + .body__slider__item {
-	visibility: visible;
+    display: flex;
     transition: opacity 3s ease-in-out;
 }
 
@@ -321,10 +319,6 @@ input[type=radio]:checked + .body__slider__item {
     padding: 0 0 0 1.5rem;
 }
 
-.footer {
-    
-}
-
 .footer__forms {
     display: flex;
     justify-content: space-around;
@@ -353,6 +347,7 @@ input[type=radio]:checked + .body__slider__item {
 
 .footer__form__login_box, .footer__form__subscribe_box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -362,11 +357,11 @@ input {
     line-height: 2;
     font-family: 'Syne', sans-serif;
     border-radius: 3px;
+    padding: 0 1rem;
 
 }
 
 .footer__btn {
-    height: 2.1rem;
     width: 9rem;
     background: #27292d85;
     border-radius: 3px;
@@ -378,6 +373,16 @@ input {
     justify-content: space-around;
 }
 
+.footer__menu_left {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .footer__text {
     color: #fff;
+}
+
+.footer__menu__item a:visited {
+    color: rgb(192, 187, 187);
 }
