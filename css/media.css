@@ -7,34 +7,33 @@
         visibility: visible;
     }
     .header__menu__list {
+        background-color: #194e34da;
+        border-radius: 6px;
         position: absolute;
         flex-direction: column;
         transform: translateX(150%);
         top: 13%;
         transition: .3s;
         text-align: right;
+        z-index: 10;
     }
     
     #menu__burger_check:checked ~ .header__menu__list {
         transform: translateX(-50%);
     }
 
-    .body__subtitle {
+    .main__subtitle {
         font-size: 1.7rem;
         padding: .7rem 0;
     }
 
-    .body__info {
+    .main__info {
         flex-direction: column;
         align-items: center;
     }
 
-    .body__info_left, .body__info_right {
+    .main__info_left, .main__info_right {
         max-width: 70%;
-    }
-
-    .body__info__list li {
-        padding: 0 0 0 2rem;
     }
 
     .footer__forms {
@@ -57,8 +56,12 @@
     html {
         font-size: 14px;
     }
+
+    .header__menu__list {
+        top: 18%;
+    }
     
-    .body__subtitle {
+    .main__subtitle {
         font-size: 1.35rem;
         padding: .5rem 0;
     }
@@ -80,15 +83,9 @@
 }
 
 @media(max-width:767px) {
-    .header__menu__list {
-        top: 20%;
-    }
     
-    .body__slider__control label img {
+    .main__slider__control label img {
         width: 65%;
-    }
-
-    .footer__form__login_box {
     }
 
     .header__slider-box {
@@ -100,15 +97,17 @@
         padding: 0 1rem;
     }
 
+    .header__slider_btn {
+        padding: .3rem 0;
+    }
+
     .header__title, .header__subtitle {
         line-height: 1.2;
     }
 
-    .slick-prev:before, .slick-next:before {
-        content: ;
-    
+    .slick-prev:before, .slick-next:before {    
         width: 15px;
-    height: 15px;
+        height: 15px;
     }
 }
 
@@ -135,11 +134,8 @@
     }
 
     .header__menu__list {
-        background-color: #194e34da;
         font-size: 1.5rem;
-        border-radius: 6px;
         display: flex;
-        z-index: 10;
     }
 
     .header__title {
@@ -153,16 +149,11 @@
     }
 
     .header__slider_btn {
-        height: 2.1rem;
-        width: 7rem;
+        max-width: 7rem;
     }
 
-    .body__slider__control label img {
+    .main__slider__control label img {
         width: 55%;
-    }
-    
-    .body__info__list li {
-        padding: 0 0 0 2.5rem;
     }
 
     .footer__menu {
